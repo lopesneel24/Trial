@@ -11,7 +11,20 @@ body {
 	  font-family: sans-serif;
    
     }
-/*For Top Bar*/
+
+   .A {
+  top:100px;
+  width: 27px;
+  height: 3px;
+  background-color: violet;
+  margin: 5px 17px;
+  cursor:pointer;
+  display:none;
+ 
+}
+   
+   
+   /*For Top Bar*/
 
 .navbar {
   width: 100%;
@@ -59,18 +72,11 @@ body {
       border-left: 2px solid white;
       height: 45px;
       position:absolute;
-      left: 50%;
-      margin-left: 197px; 
+      right:10%;
+      margin-right:-103px; 
       top: 6px;
     }
    }
-
-
-
-
-
-
- 
 
 
 
@@ -80,21 +86,26 @@ body {
 
 ul {
   list-style-type: none;
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  left:10px;
+  display:none;
 }
 
 li {
   float: left;
+  left:10px;
+  margin-top: 25px;
+  margin-bottom:4px;
 }
 
 li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 23px 21px;
+  padding: 28x 28px;
   text-decoration: none;
   font-size:16px;
 
@@ -115,6 +126,7 @@ li a:hover:not(.active) {
   padding: 24px 28px;
   font-size: 16px;
   border: none;
+ 
 }
 
 
@@ -122,7 +134,7 @@ li a:hover:not(.active) {
 
 .dropdown {
   position: relative;
-  
+   display:none;
 }
 
 .dropdown-content {
@@ -133,7 +145,7 @@ li a:hover:not(.active) {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index:1;
   text-align:left;
-  
+ 
 
 }
 
@@ -145,13 +157,187 @@ li a:hover:not(.active) {
   text-decoration: none;
   display:relative;
   text-align:left;
+  font-size:19px;
 }
 
-.dropdown-content a:hover {background-color:violet;}
+.dropdown-content a:hover {background-color:violet;
+                            
+                                     }
 
 .dropdown:hover .dropdown-content {display:block;}
 
 .dropbtn:hover {color:blue;}
+
+/*For sidebar content */
+   
+   .dropbtnA {
+  background-color: #333;
+  color: white;
+  padding: 24px 28px;
+  font-size: 16px;
+  border: none;
+ 
+} 
+ 
+ .dropdownA {
+  position: relative;
+
+}
+
+.dropdown-contentA {
+  display:none;
+  position:fixed;
+  background-color:white;
+  width:200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:1;
+  text-align:left;
+ 
+
+}
+
+
+
+.dropdown-contentA a {
+  color: black;
+  padding: 20px 50px;
+  text-decoration: none;
+  display:relative;
+  text-align:left;
+  font-size:19px;
+}
+
+.dropdown-contentA a:hover {background-color:violet;
+                            
+                                     }
+
+.dropdownA:hover .dropdown-contentA {display:block;}
+
+.dropbtnA:hover {color:blue;}
+
+
+
+
+
+
+
+
+/* For Sidebar */
+
+	.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 122px;
+  left: 0px;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+  display:none;
+}
+
+.sidenav a {
+  padding: 10px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #333;
+  display: block;
+  transition: 0.3s;
+
+  text-align:left;
+
+}
+
+.sidenav a:hover {
+  color:blue;
+   padding: 10px 8px;
+   left:10px;
+}
+
+.sidenav .openbtn {
+  position: absolute;
+  top:5px;
+
+  font-size: 34px;
+  margin-left: 10px;
+  text-align:right;
+  padding:1px;
+  color:white;
+}
+
+ 
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 36px;
+  margin-right: 15px;
+  text-align:right;
+  padding:1px;
+  color:white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+@media (min-width:480px) and (max-width:555px)
+    {
+       .A{
+       display:block
+       }
+     
+     .sidenav {
+       display:block;
+       }
+
+   ul {
+  list-style-type: none;
+  display:block;
+  margin-top: 50px;
+
+
+}
+
+li {
+
+  margin-top: 35px;
+  margin-bottom:10px;
+}
+
+   
+   
+   
+   }
+      
+ 
+ @media (min-width:555px) and (max-width:1080px)     
+     {
+        .dropdown {
+             display:block
+             }
+        
+        ul {
+  list-style-type: none;
+   display:block;
+  margin-top: 40px;
+
+
+}
+
+li {
+  float: left;
+  left:10px;
+  margin-top: 25px;
+  margin-bottom:4px;
+}
+
 
 
 
@@ -170,7 +356,60 @@ li a:hover:not(.active) {
 
 
 <ul>
-<li><a class="active" href="index.html";">CLER JOYS</a></li>
+
+
+<li><span style="font-size:30px;cursor:pointer" onclick="openNav()">
+
+
+<div class ="A" style="bottom:10px; color:white;"></div>
+<div class ="A" style="bottom:10px;color:white;"></div>
+<div class ="A" style="bottom:10px;color:white;"></div>
+
+</span></li>
+
+
+ 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+   <div class="dropdownA">
+  <button class="dropbtnA">WOMEN</button>
+  <div class="dropdown-contentA">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+<div class="dropdownA">
+  <button class="dropbtnA">CHILDREN</button>
+  <div class="dropdown-contentA">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+
+
+<div class="dropdownA">
+  <button class="dropbtnA">EVENTS & OCCASIONS</button>
+  <div class="dropdown-contentA">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+</a></li>
 
 <li><div class="dropdown">
   <button class="dropbtn">WOMEN</button>
@@ -207,6 +446,16 @@ li a:hover:not(.active) {
 <li><a href="Review.html";style=font-family:sans-serif;"></a></li>
 
 </ul>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 </body>
 </html>
