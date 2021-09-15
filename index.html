@@ -69,23 +69,38 @@ body {
    left: 50%;
    margin-left: 715px; 
    top: 6px;
+   display:none;
  }
 }
-  
- @media only screen and (min-width:480px) 
+
+
+
+@media (min-width:300px) and (max-width:555px)
 
    { 
     .vl {
-     
-      border-left: 2px solid white;
+      display:block;
+      border-left: 1.4px solid white;
       height: 45px;
-      position:absolute;
+      position:fixed;
       right:10%;
-      margin-right:-103px; 
+      margin-right:13px; 
       top: 6px;
     }
    }
 
+ @media (min-width:555px) and (max-width:1920px) 
+       { 
+    .vl {
+      display:block;
+      border-left: 1.4px solid white;
+      height: 45px;
+      position:fixed;
+      right:10%;
+      margin-right:-54px; 
+      top: 6px;
+    }
+   }
 
 
 
@@ -237,7 +252,7 @@ li a:hover:not(.active) {
   width: 0px;
   position: fixed;
   z-index: 1;
-  top: 122px;
+  top: 107px;
   left: 0px;
   background-color: #333;
   overflow-x: hidden;
@@ -315,7 +330,7 @@ li a:hover:not(.active) {
 
 li {
 
-  margin-top: 35px;
+  margin-top: 22px;
   margin-bottom:10px;
 }
 
